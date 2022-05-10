@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Container>
+  <Name>libcbus</Name>
+  <Beta>True</Beta>
+    <Project>https://github.com/micolous/cbus/</Project>
+  <Changes>
+  </Changes>
+<Category>HomeAutomation</Category>
+  <Support></Support>
+  <Description>This is a reimplementation of the PCI serial protocol from scratch. This is done using a combination Clipsal's Open C-Bus documentation and reverse engineering (to fill in the gaps).</Description>
+  <Overview>This is a reimplementation of the PCI serial protocol from scratch. This is done using a combination Clipsal's Open C-Bus documentation and reverse engineering (to fill in the gaps).</Overview>
+  <Registry>https://registry.hub.docker.com/u/bprc/libcbus/</Registry>
+  <Repository>bprc/libcbus</Repository>
+  <BindTime>true</BindTime>
+  <Privileged>false</Privileged>
+   <Environment>
+<Variable>
+<Name>MQTT Server</Name>
+<Value></Value>
+</Variable>
+<Variable>
+<Name>MQTT Port</Name>
+<Value></Value>
+</Variable>
+</Environment>
+  <Networking>
+    <Mode>bridge</Mode>
+    <Publish>
+      <Port>
+        <HostPort>8066</HostPort>
+        <ContainerPort>8066</ContainerPort>
+        <Protocol>tcp</Protocol>
+      </Port>
+    </Publish>
+  </Networking>
+  <Data>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir></ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+       <Volume>
+      <HostDir></HostDir>
+      <ContainerDir></ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+    <Volume>
+      <HostDir></HostDir>
+      <ContainerDir>/nobody/.config/ghb</ContainerDir>
+      <Mode>rw</Mode>
+    </Volume>
+  </Data>
+  <WebUI></WebUI>
+  <Banner></Banner>
+  <Icon></Icon>
+</Container>
